@@ -31,6 +31,7 @@ int start = 0;
 void setup()
 {
   println(Arduino.list());
+   arduino = new Arduino(this, Arduino.list()[1], 57600);
   arduino.pinMode(inPin1, Arduino.INPUT);
   arduino.pinMode(inPin2, Arduino.INPUT);
   arduino.pinMode(inPin3, Arduino.INPUT);
@@ -64,6 +65,7 @@ void loop()
   }
   if (dpadright == Arduino.LOW) {
     //emulate keypress
+    println(" Hello, world! ");
   }
   if (dpadup == Arduino.LOW) {
     //emulate keypress
@@ -96,5 +98,5 @@ void loop()
     //emulate keypress
   }
   {
-    
   }
+}
