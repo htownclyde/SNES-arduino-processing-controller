@@ -71,16 +71,28 @@ void loop()
   select = arduino.digitalRead(inPin11);
   start = arduino.digitalRead(inPin12);// read the input pin
   if (dpadleft == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_a);
+     robot.keyPress(KeyEvent.VK_A);
+  }
+  if (dpadleft == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_A);
   }
   if (dpadright == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_d);
+     robot.keyPress(KeyEvent.VK_D);
+  }
+  if (dpadright == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_D);
   }
   if (dpadup == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_w);
+     robot.keyPress(KeyEvent.VK_W);
+  }
+  if (dpadup == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_W);
   }
   if (dpaddown == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_s);
+     robot.keyPress(KeyEvent.VK_S);
+  }
+  if (dpaddown == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_S);
   }
   if (buttony == Arduino.LOW) {
     //emulate keypress
