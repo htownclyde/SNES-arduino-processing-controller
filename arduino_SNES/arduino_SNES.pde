@@ -1,8 +1,12 @@
 import processing.serial.*;
 import cc.arduino.*;
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+Robot robot;
 
 Arduino arduino;
-
 
 int inPin1 = 1;
 int inPin2 = 2;
@@ -30,8 +34,14 @@ int select = 0;
 int start = 0;  
 void setup()
 {
+  try { 
+    robot = new Robot();
+  } catch (AWTException e) {
+    e.printStackTrace();
+    exit();
+  }
   println(Arduino.list());
-   arduino = new Arduino(this, Arduino.list()[1], 57600);
+  arduino = new Arduino(this, Arduino.list()[1], 57600);
   arduino.pinMode(inPin1, Arduino.INPUT);
   arduino.pinMode(inPin2, Arduino.INPUT);
   arduino.pinMode(inPin3, Arduino.INPUT);
@@ -61,17 +71,16 @@ void loop()
   select = arduino.digitalRead(inPin11);
   start = arduino.digitalRead(inPin12);// read the input pin
   if (dpadleft == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_a);
   }
   if (dpadright == Arduino.LOW) {
-    //emulate keypress
-    println(" Hello, world! ");
+     robot.keyPress(KeyEvent.VK_d);
   }
   if (dpadup == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_w);
   }
   if (dpaddown == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_s);
   }
   if (buttony == Arduino.LOW) {
     //emulate keypress
