@@ -71,52 +71,76 @@ void loop()
   select = arduino.digitalRead(inPin11);
   start = arduino.digitalRead(inPin12);// read the input pin
   if (dpadleft == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_A);
+     robot.keyPress(KeyEvent.VK_LEFT);
   }
   if (dpadleft == Arduino.HIGH) {
-     robot.keyRelease(KeyEvent.VK_A);
+     robot.keyRelease(KeyEvent.VK_LEFT);
   }
   if (dpadright == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_D);
+     robot.keyPress(KeyEvent.VK_RIGHT);
   }
   if (dpadright == Arduino.HIGH) {
-     robot.keyRelease(KeyEvent.VK_D);
+     robot.keyRelease(KeyEvent.VK_RIGHT);
   }
   if (dpadup == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_W);
+     robot.keyPress(KeyEvent.VK_UP);
   }
   if (dpadup == Arduino.HIGH) {
-     robot.keyRelease(KeyEvent.VK_W);
+     robot.keyRelease(KeyEvent.VK_UP);
   }
   if (dpaddown == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_S);
+     robot.keyPress(KeyEvent.VK_DOWN);
   }
   if (dpaddown == Arduino.HIGH) {
-     robot.keyRelease(KeyEvent.VK_S);
+     robot.keyRelease(KeyEvent.VK_DOWN);
   }
   if (buttony == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_Y);
+  }
+  if (buttony == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_Y);
   }
   if (buttonx == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_X);
+  }
+  if (buttonx == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_X);
   }
   if (buttonb == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_ALT);
+  }
+  if (buttonb == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_ALT);
   }
   if (buttona == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_WINDOWS);
+  }
+  if (buttona == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_WINDOWS);
   }
   if (leftshoulder == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_Z);
+  }
+  if (leftshoulder == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_Z);
   }
   if (rightshoulder == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_X);
+  }
+  if (rightshoulder == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_X);
   }
   if (select == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_CONTROL);
+  }
+  if (select == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_CONTROL);
   }
   if (start == Arduino.LOW) {
-    //emulate keypress
+     robot.keyPress(KeyEvent.VK_ENTER);
+  }
+  if (start == Arduino.HIGH) {
+     robot.keyRelease(KeyEvent.VK_ENTER);
   }
   {
   }
