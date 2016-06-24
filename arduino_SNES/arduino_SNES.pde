@@ -95,16 +95,16 @@ void loop()
      robot.keyRelease(KeyEvent.VK_DOWN);
   }
   if (buttony == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_Y);
+     robot.keyPress(KeyEvent.VK_SHIFT);
   }
   if (buttony == Arduino.HIGH) {
-     robot.keyRelease(KeyEvent.VK_Y);
+     robot.keyRelease(KeyEvent.VK_SHIFT);
   }
   if (buttonx == Arduino.LOW) {
-     robot.keyPress(KeyEvent.VK_X);
+     robot.keyPress(KeyEvent.VK_HOME);
   }
   if (buttonx == Arduino.HIGH) {
-     robot.keyRelease(KeyEvent.VK_X);
+     robot.keyRelease(KeyEvent.VK_HOME);
   }
   if (buttonb == Arduino.LOW) {
      robot.keyPress(KeyEvent.VK_ALT);
